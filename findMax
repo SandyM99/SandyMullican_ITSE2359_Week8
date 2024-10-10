@@ -1,0 +1,10 @@
+// Template function to find the maximum of two values
+template <typename T>
+T findMax(const T& a, const T& b) {
+    return (a > b) ? a : b;
+}
+
+// Overload the > operator in Fraction class for findMax to work
+bool operator>(const Fraction& other) const {
+    return (numerator * other.denominator) > (other.numerator * denominator);
+}
